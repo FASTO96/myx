@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: f1
+spec:
+  selector:
+    matchLabels:
+      app: f1
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: f1
+    spec:
+      containers:
+      - name: f1
+        image: sab22/f1:5
+        ports:
+        - containerPort: 80
