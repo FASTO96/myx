@@ -1,18 +1,20 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-resource-aa
+  name: ingrcp
   namespace: f1
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /cop25.php
 spec:
   ingressClassName: nginx
   rules:
-  - host: cop25.example.com
+  - host: cp25.example.com
     http:
       paths:
-      - path: /
+      - path: /cop25
         pathType: Prefix
         backend:
           service:
-            name: cop25 
+            name: cop25
             port:
               number: 80
