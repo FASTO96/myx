@@ -1,0 +1,19 @@
+
+piVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx
+  name: balota
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: nginx-balota
+status:
+  loadBalancer: {}
+
+
