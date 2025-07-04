@@ -1,0 +1,25 @@
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fad
+  namespace: f1
+
+spec:
+  selector:
+    matchLabels:
+      app: fad
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: fad
+    spec:
+      containers:
+      - name: fad
+        image: sab22/fad:1
+        ports:
+        - containerPort: 80
+
+
