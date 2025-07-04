@@ -4,6 +4,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: balota
+  namespace: f1
+
 spec:
   selector:
     matchLabels:
@@ -16,7 +18,7 @@ spec:
     spec:
       containers:
       - name: balota
-        image: sab22/balota:1
+        image: sab22/balota:2
         ports:
         - containerPort: 80
 
