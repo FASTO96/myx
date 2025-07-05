@@ -3,21 +3,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pup
+  name: n0
   namespace: f1
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /pup.php
+    nginx.ingress.kubernetes.io/rewrite-target: /n0.php
 spec:
   ingressClassName: nginx
   rules:
   - host: cp25.example.com
     http:
       paths:
-      - path: /pup
+      - path: /n0
         pathType: Prefix
         backend:
           service:
-            name: pup
+            name: n0
             port:
               number: 80
 
