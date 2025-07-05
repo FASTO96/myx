@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: fad
-        image: sab22/fad:latest
+        image: sab22/fad:6
         ports:
         - containerPort: 80
 
