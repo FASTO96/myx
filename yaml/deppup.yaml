@@ -1,0 +1,25 @@
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pup
+  namespace: f1
+
+spec:
+  selector:
+    matchLabels:
+      app: pup
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pup
+    spec:
+      containers:
+      - name: pup
+        image: sab22/pup:1
+        ports:
+        - containerPort: 80
+
+
