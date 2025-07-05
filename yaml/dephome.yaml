@@ -1,0 +1,25 @@
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: home
+  namespace: f1
+
+spec:
+  selector:
+    matchLabels:
+      app: home
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: home
+    spec:
+      containers:
+      - name: home
+        image: sab22/home:1
+        ports:
+        - containerPort: 80
+
+
