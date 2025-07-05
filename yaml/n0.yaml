@@ -6,7 +6,7 @@ metadata:
   name: n0
   namespace: f1
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /n0.php
+    nginx.ingress.kubernetes.io/rewrite-target: /n0.js
 spec:
   ingressClassName: nginx
   rules:
