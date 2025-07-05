@@ -3,22 +3,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fad
+  name: copnode
   namespace: f1
 
 spec:
   selector:
     matchLabels:
-      app: fad
+      app: copnode
   replicas: 1
   template:
     metadata:
       labels:
-        app: fad
+        app: copnode
     spec:
       containers:
-      - name: fad
-        image: sab22/fad:latest
+      - name: copnode
+        image: sab22/copnode:2
         ports:
         - containerPort: 80
 

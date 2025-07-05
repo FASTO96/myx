@@ -3,22 +3,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fad
+  name: balota
   namespace: f1
 
 spec:
   selector:
     matchLabels:
-      app: fad
+      app: balota
   replicas: 1
   template:
     metadata:
       labels:
-        app: fad
+        app: balota
     spec:
       containers:
-      - name: fad
-        image: sab22/fad:latest
+      - name: balota
+        image: sab22/balota:2
         ports:
         - containerPort: 80
 
