@@ -1,0 +1,25 @@
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: copnode
+  namespace: f1
+
+spec:
+  selector:
+    matchLabels:
+      app: copnode
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: copnode
+    spec:
+      containers:
+      - name: copnode
+        image: sab22/copnode:2
+        ports:
+        - containerPort: 80
+
+

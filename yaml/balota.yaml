@@ -1,0 +1,25 @@
+
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: balota
+  namespace: f1
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /balota.php
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: cp25.example.com
+    http:
+      paths:
+      - path: /balota
+        pathType: Prefix
+        backend:
+          service:
+            name: balota
+            port:
+              number: 80
+
+
+
