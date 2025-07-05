@@ -6,7 +6,7 @@ metadata:
   name: pup
   namespace: f1
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /pup.php
+    nginx.ingress.kubernetes.io/rewrite-target: /pup.py
 spec:
   ingressClassName: nginx
   rules:
