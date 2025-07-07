@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: sab22/main:2
+        image: sab22/main:3
         ports:
         - containerPort: 80
 
