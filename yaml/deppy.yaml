@@ -3,22 +3,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: main
+  name: py
   namespace: f1
 
 spec:
   selector:
     matchLabels:
-      app: main
+      app: py
   replicas: 1
   template:
     metadata:
       labels:
-        app: main
+        app: py
     spec:
       containers:
-      - name: main
-        image: sab22/main:4
+      - name: py
+        image: sab22/py:3
         ports:
         - containerPort: 80
 
